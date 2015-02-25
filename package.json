@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Shawn Inder <shawninder@gmail.com>",
   "scripts": {
-    "start": "sudo forever proxy.js 80 8000"
+    "start": "sudo forever proxy.js"
   },
   "dependencies": {
     "http-proxy": "^1.6.0"

@@ -2,6 +2,7 @@ var httpProxy = require('http-proxy')
 	, fs = require('fs')
 	, from = process.argv[2]
 	, to = process.argv[3]
+	, pass = process.argv[4]
 	, options = {}
 	, server
 
@@ -15,6 +16,9 @@ if (from === '443') {
 	options.ssl = {
 		key: fs.readFileSync('cert/server.key')
 		, cert: fs.readFileSync('cert/server.crt')
+	}
+	if (pass) {
+		options.ssl.passphrase = pass
 	}
 	options.secure = false
 }

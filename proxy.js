@@ -14,8 +14,8 @@ if (!from || !to) {
 
 if (from === '443') {
 	options.ssl = {
-		key: fs.readFileSync('cert/server.key')
-		, cert: fs.readFileSync('cert/server.crt')
+		key: fs.readFileSync('cert/private_key.pem')
+		, cert: fs.readFileSync('cert/certificate.pem')
 	}
 	if (pass) {
 		options.ssl.passphrase = pass
